@@ -1,4 +1,4 @@
-var toppingsArray = [["pepperoni", 1.0], ["mushrooms", 0.5], ["bacon", 1.5], ["peppers", 1.0], ["onions", 1.0], ["basil", 1.5], ["garlic", 1.0], ["chicken", 1.5], ["extra cheese", 1.0]];
+var toppingsArray = [["pepperoni", 1.0], ["mushroom", 0.5], ["bacon", 1.5], ["pepper", 1.0], ["onion", 1.0], ["basil", 1.5], ["garlic", 1.0], ["chicken", 1.5], ["extra cheese", 1.0]];
 
 var Pizza = function() {
   this.wholeSize = "hidden";
@@ -60,7 +60,7 @@ var generateToppingsButtons = function(toppingsArray, toppingsDiv) {
 
 $(function() {
   var pizza = new Pizza();
-  generateToppingsButtons(toppingsArray, "toppings-div");
+  generateToppingsButtons(toppingsArray, "toppings-buttons-div");
 
   $(".size-button").click(function() {
     pizza.wholeSize = $(this).attr('id');
@@ -73,7 +73,9 @@ $(function() {
     var chosenTopping = getTopping($(this).attr('id'), toppingsArray);
     var newTopping = new Topping(chosenTopping[0], chosenTopping[1]);
     pizza.addTopping(newTopping);
-    console.log(pizza.toppings);
+    console.log("#" + $(this).attr('id') + "-image");
+    var toppingImage = $("toppings-div").find();
+    $("#pizza-dough").append($("#" + $(this).attr('id') + "-image"));
   })
 
   $('.checkout-button').click(function() {
@@ -82,3 +84,16 @@ $(function() {
     }
   })
 })
+
+
+
+
+
+
+
+
+
+
+
+
+var spacer = true;
