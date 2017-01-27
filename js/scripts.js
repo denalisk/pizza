@@ -79,7 +79,7 @@ $(function() {
       pizza.addTopping(newTopping);
       console.log("#" + $(this).attr('id') + "-image");
       var toppingImage = $("toppings-div").find();
-      $("#pizza-dough").append($("#" + $(this).attr('id') + "-image"));      
+      $("#topping-pictures").append($("#" + $(this).attr('id') + "-image"));      
     }
   })
 
