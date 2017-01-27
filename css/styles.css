@@ -53,7 +53,7 @@
   box-shadow: 0 0 2px 1px rgba(104, 19, 8, 0.9);
 }
 
-#mushroom-image #pepperoni-image {
+#mushroom-image, #pepperoni-image, #onion-image {
   min-height: 50px;
   min-width: 50px;
 }
@@ -77,8 +77,11 @@
   box-shadow: 0px -2px 0px 2px rgb(112, 78, 21);
 }
 
-#onion-image {
-
+#onion-piece {
+  height: 1.5%;
+  width: 3%;
+  border-radius: 50%;
+  box-shadow: .2px -0.5px .2px .1px rgb(239, 226, 83), .2px -1px .2px .2px rgb(214, 207, 107);
 }
 
 
