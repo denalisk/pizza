@@ -11,6 +11,7 @@
   background-image: radial-gradient(circle at center 0, yellow, lightyellow);
   margin-left: 30%;
   margin-top: 4%;
+  position: relative;
 }
 
 .large {
@@ -42,12 +43,13 @@
 
 .topping-holder {
   height: 100%;
-  width: 50%;
+  width: 100%;
 }
 
 #mushroom-image, #pepperoni-image, #onion-image, #bacon-image, #basil-image, #garlic-image, #chicken-image, #pepper-image {
-  min-height: 50px;
-  min-width: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
 
 #pepperoni-piece {
@@ -78,15 +80,15 @@
 }
 
 #onion-piece {
-  height: 1.5%;
-  width: 3%;
+  height: 3%;
+  width: 4%;
   border-radius: 50%;
-  box-shadow: .2px -0.5px .2px .1px rgb(239, 226, 83), .2px -1px .2px .2px rgb(214, 207, 107);
+  box-shadow: .2px -1px .2px .1px rgb(239, 226, 83), .2px -2px .2px .2px rgb(214, 207, 107);
 }
 
 #bacon-piece {
   height: 5%;
-  width: 4%;
+  width: 2%;
   background: rgb(206, 93, 80);
   border-radius: 80% 15% 30% 15%;
   box-shadow: inset 2px 0px 0px .3px white, 2px 0px 0px .1px rgb(219, 153, 92), 4px 0px 0px .1px white, 8px 0px 0px .1px rgb(206, 93, 80), 10px 0px 0px .1px white, 12px 0px 0px .1px rgb(219, 153, 92);
@@ -94,7 +96,7 @@
 
 #basil-piece {
   height: 5%;
-  width: 10%;
+  width: 5%;
   background: green;
   border-radius: 80% 10% 80% 10%;
   border: .2px solid black;
@@ -103,7 +105,7 @@
 
 #garlic-piece {
   height: 1%;
-  width: 3%;
+  width: 2%;
   background: white;
   border-radius: 80% 10% 80% 10%;
   border: .2px solid black;
@@ -112,15 +114,15 @@
 
 #chicken-piece {
   height: 6%;
-  width: 9%;
+  width: 5%;
   background: rgb(226, 204, 163);
   border-radius: 20% 80% 50% 40%;
   box-shadow: inset 7px 0px 5px 1px rgb(247, 191, 108), 2px 0px 2px 0px rgb(175, 52, 21);
 }
 
 #pepper-piece {
-  height: 1.5%;
-  width: 0.8%;
+  height: 4%;
+  width: 3%;
   background-image: linear-gradient(0deg, rgb(97, 142, 104), rgb(38, 76, 31));
   border-radius: 25%;
 }
