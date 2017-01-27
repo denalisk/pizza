@@ -64,6 +64,8 @@ $(function() {
   generateToppingsButtons(toppingsArray, "toppings-buttons-div");
 
   $(".size-button").click(function() {
+    $("#pizza-div").show();
+    $("#buffer-div").hide();
     pizza.wholeSize = $(this).attr('id');
     $('#pizza-dough').removeClass("large medium small hidden");
     $('#pizza-dough').addClass(pizza.wholeSize);
