@@ -5,14 +5,32 @@ var Pizza = function() {
   this.toppings = [];
 }
 
-var Topping = function(toppingName, price) {
+var Topping = function(toppingName, cost) {
   this.toppingName = toppingName;
-  this.price = price;
+  this.cost = cost;
 }
 
 Pizza.prototype.addTopping = function(topping) {
   // this function adds a topping object to the pizza object
   this.toppings.push(topping);
+}
+
+Pizza.prototype.finalPrice = function() {
+  var totalPrice = 7.0;
+  var costAdjuster = 1.0;
+  if (this.wholeSize === "large") {
+    totalPrice += 8.0;
+    costAdjuster = 1.5;
+  } else if (this.wholeSize === "medium") {
+    totalPrice += 4.0;
+  } else {
+    totalPrice += 1.0;
+    costAdjuster = 0.5;
+  }
+  for (var index = 0; index < this.toppings.length; index++) {
+    totalPrice += this.toppings[index].cost;
+  }
+  return totalPrice;
 }
 
 var getTopping = function(toppingName, toppingsArray) {
@@ -56,5 +74,11 @@ $(function() {
     var newTopping = new Topping(chosenTopping[0], chosenTopping[1]);
     pizza.addTopping(newTopping);
     console.log(pizza.toppings);
+  })
+
+  $('.checkout-button').click(function() {
+    if (pizza.wholeSize != "hidden") {
+      console.log(pizza.finalPrice());
+    }
   })
 })
