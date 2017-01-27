@@ -16,6 +16,7 @@ Pizza.prototype.addTopping = function(topping) {
 }
 
 Pizza.prototype.finalPrice = function() {
+  // This function returns the total price of a created pizza
   var totalPrice = 7.0;
   var costAdjuster = 1.0;
   if (this.wholeSize === "large") {
@@ -80,8 +81,14 @@ $(function() {
 
   $('.checkout-button').click(function() {
     if (pizza.wholeSize != "hidden") {
-      console.log(pizza.finalPrice());
+      $(".price-total").text((pizza.finalPrice().toFixed(2)));
+      console.log(pizza.finalPrice().toFixed(2));
+      $(".receipt").show();
     }
+  })
+
+  $("#order-again").click(function() {
+    location.reload();
   })
 })
 
