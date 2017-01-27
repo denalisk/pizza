@@ -1,3 +1,35 @@
 .capitals {
   text-transform: capitalize;
 }
+
+#pizza-div {
+  height: 600px;
+  width: 100%;
+}
+
+#pizza-dough {
+  background-image: radial-gradient(circle at center 0, yellow, lightyellow);
+  margin-left: 30%;
+  margin-top: 4%;
+}
+
+.large {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(239, 194, 69, 0.8), inset 0 0 0 5px rgba(219, 59, 24, 0.9);
+}
+
+.medium {
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(239, 194, 69, 0.8), inset 0 0 0 5px rgba(219, 59, 24, 0.9);
+}
+
+.small {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(239, 194, 69, 0.8), inset 0 0 0 5px rgba(219, 59, 24, 0.9);
+}

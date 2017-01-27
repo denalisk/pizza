@@ -64,8 +64,8 @@ $(function() {
 
   $(".size-button").click(function() {
     pizza.wholeSize = $(this).attr('id');
-    $('#pizza-div').removeClass("large medium small hidden");
-    $('#pizza-div').addClass(pizza.wholeSize);
+    $('#pizza-dough').removeClass("large medium small hidden");
+    $('#pizza-dough').addClass(pizza.wholeSize);
     console.log(pizza.wholeSize);
   })
 
