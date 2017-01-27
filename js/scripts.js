@@ -17,19 +17,32 @@ Pizza.prototype.addTopping = function(topping) {
 
 var getTopping = function(toppingName, toppingsArray) {
   // this function returns the topping item from the toppingsArray
-  for (index = 0; index < toppingsArray.length; index++) {
+  for (var index = 0; index < toppingsArray.length; index++) {
     if (toppingsArray[index][0] === toppingName) {
       return toppingsArray[index];
     }
   }
 }
 
-var makeElement = function(element, classes, id, parentId) {
-  document.createElement();
+var makeElement = function(element, classes, id, parentDivClass, htmlText) {
+  // this function generates a new element and appends it to the parentDiv
+  var newElement = document.createElement(element);
+  newElement.className = classes;
+  newElement.innerHTML = htmlText;
+  newElement.id = id;
+  $("." + parentDivClass).append(newElement);
+}
+
+var generateToppingsButtons = function(toppingsArray, toppingsDiv) {
+  // this function makes buttons out of all the elements in the toppingsArray and sticks them in the toppingsDiv
+  for (var index = 0; index < toppingsArray.length; index++) {
+    makeElement('button', "topping-button btn btn-danger capitals", toppingsArray[index][0], toppingsDiv, toppingsArray[index][0])
+  }
 }
 
 $(function() {
   var pizza = new Pizza();
+  generateToppingsButtons(toppingsArray, "toppings-div");
 
   $(".size-button").click(function() {
     pizza.wholeSize = $(this).attr('id');

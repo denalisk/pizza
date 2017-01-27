@@ -15,6 +15,7 @@
 * Allow user to select a size of pizza
 * Resize pizza on new size selection
 * Allow user to add a topping
+* Generate buttons from the array of toppings
 * Place a topping on the pizza
 * Randomly place a topping on the pizza
 * Place a number of toppings on the pizza depending on pizza size
