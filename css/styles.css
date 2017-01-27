@@ -114,10 +114,16 @@
 
 #chicken-piece {
   height: 6%;
-  width: 5%;
-  background: rgb(226, 204, 163);
-  border-radius: 20% 80% 50% 40%;
-  box-shadow: inset 7px 0px 5px 1px rgb(247, 191, 108), 2px 0px 2px 0px rgb(175, 52, 21);
+  width: 3%;
+  background-image: linear-gradient(270deg, rgb(226, 204, 163), rgb(247, 191, 108));
+  border-radius: 20% 80% 50% 90%;
+  box-shadow: -60px 100px 50px 0px rgb(226, 204, 163), -60px 100px 0px 0px rgb(247, 191, 108), -58px 100px 2px 0px rgb(175, 52, 21), 75px 80px 50px 0px rgb(226, 204, 163), 75px 80px 0px 0px rgb(247, 191, 108), 77px 80px 2px 0px rgb(175, 52, 21), 2px 0px 2px 0px rgb(175, 52, 21),
+  -120px -20px 50px 0px rgb(226, 204, 163), -120px -20px 0px 0px rgb(247, 191, 108), -118px -20px 2px 0px rgb(175, 52, 21),
+  -140px 130px 50px 0px rgb(226, 204, 163), -140px 130px 0px 0px rgb(247, 191, 108), -138px 130px 2px 0px rgb(175, 52, 21),
+  100px -180px 50px 0px rgb(226, 204, 163), 100px -180px 0px 0px rgb(247, 191, 108), 102px -180px 2px 0px rgb(175, 52, 21),
+  -30px -110px 50px 0px rgb(226, 204, 163), -30px -110px 0px 0px rgb(247, 191, 108), -28px -110px 2px 0px rgb(175, 52, 21),
+  150px -30px 50px 0px rgb(226, 204, 163), 150px -30px 0px 0px rgb(247, 191, 108), 152px -30px 2px 0px rgb(175, 52, 21),
+  -140px -140px 50px 0px rgb(226, 204, 163), -140px -140px 0px 0px rgb(247, 191, 108), -138px -140px 2px 0px rgb(175, 52, 21);
 }
 
 #pepper-piece {
