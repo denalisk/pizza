@@ -73,12 +73,14 @@ $(function() {
   })
 
   $(".topping-button").click(function() {
-    var chosenTopping = getTopping($(this).attr('id'), toppingsArray);
-    var newTopping = new Topping(chosenTopping[0], chosenTopping[1]);
-    pizza.addTopping(newTopping);
-    console.log("#" + $(this).attr('id') + "-image");
-    var toppingImage = $("toppings-div").find();
-    $("#pizza-dough").append($("#" + $(this).attr('id') + "-image"));
+    if (pizza.wholeSize != "hidden") {
+      var chosenTopping = getTopping($(this).attr('id'), toppingsArray);
+      var newTopping = new Topping(chosenTopping[0], chosenTopping[1]);
+      pizza.addTopping(newTopping);
+      console.log("#" + $(this).attr('id') + "-image");
+      var toppingImage = $("toppings-div").find();
+      $("#pizza-dough").append($("#" + $(this).attr('id') + "-image"));      
+    }
   })
 
   $('.checkout-button').click(function() {
