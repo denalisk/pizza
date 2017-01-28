@@ -63,6 +63,7 @@ var generateToppingsButtons = function(toppingsArray, toppingsDiv) {
 }
 
 var storePizza = function(pizza, destinationId) {
+  // This function adds the current pizza to the list in text form
   var orderDescription = "One " + pizza.wholeSize + " pizza with ";
   if (pizza.toppings.length === 0) {
     orderDescription += "cheese"
@@ -81,6 +82,7 @@ var storePizza = function(pizza, destinationId) {
 }
 
 var tallyPizzas = function(pizzaArray) {
+  // this function totals the cost of all the pizzas
   var total = 0;
   for (var index = 0; index < pizzaArray.length; index++) {
     total += pizzaArray[index].finalPrice();
@@ -105,7 +107,7 @@ $(function() {
       storePizza(pizza, "#pizza-list");
       pizza = new Pizza();
       $("#topping-pictures").empty();
-      $("#pizza-dough").hide();       
+      $("#pizza-dough").hide();
     }
   })
 

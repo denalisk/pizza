@@ -42,7 +42,7 @@
 * CSS with bootstrap
 * javascript with jQuery
 
-[gh-pages link for this project](https://denalisk.github.io/ping-pong)
+[gh-pages link for this project](https://denalisk.github.io/pizza)
 
 ##### Copyright (c) 2017 Sam Kirsch.
 
