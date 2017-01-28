@@ -5,7 +5,6 @@ var orderList = [];
 var Pizza = function() {
   this.wholeSize = "hidden";
   this.toppings = [];
-  orderList.push(this);
 }
 
 var Topping = function(toppingName, cost) {
@@ -90,16 +89,18 @@ var tallyPizzas = function(pizzaArray) {
   return total
 }
 
+
+
 $(function() {
   var pizza = new Pizza();
   generateToppingsButtons(toppingsArray, "toppings-buttons-div");
 
   $(".size-button").click(function() {
+    orderList.push(pizza);
     $("#pizza-dough").show();
     pizza.wholeSize = $(this).attr('id');
     $('#pizza-dough').removeClass("large medium small hidden");
     $('#pizza-dough').addClass(pizza.wholeSize);
-    console.log(pizza.wholeSize);
   })
 
   $("#new-pizza").click(function() {
@@ -111,12 +112,19 @@ $(function() {
     }
   })
 
+  $("#clear-button").click(function() {
+    orderList = [];
+    $("#topping-pictures").empty();
+    $("#pizza-dough").hide();
+    $("#pizza-list").empty();
+    pizza = new Pizza();
+  })
+
   $(".topping-button").click(function() {
     if (pizza.wholeSize != "hidden") {
       var chosenTopping = getTopping($(this).attr('id'), toppingsArray);
       var newTopping = new Topping(chosenTopping[0], chosenTopping[1]);
       pizza.addTopping(newTopping);
-      console.log("#" + $(this).attr('id') + "-image");
       var toppingImage = $("toppings-div").find();
       $("#topping-pictures").append($("#" + $(this).attr('id') + "-image").clone());
     }
