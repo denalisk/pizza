@@ -32,32 +32,42 @@
       </div>
     </div>
     <div class="jumbotron">
-      <h1>PIZZA!</h1>
+      <h1>PIZZA by Delivery!</h1>
     </div>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-8">
-          <div id="buffer-div"></div>
           <div class="" id="pizza-div">
             <div class="" id="pizza-dough">
             </div>
           </div>
-          <button type="button" id="large" class="size-button btn btn-warning" name="button" value="300">Large</button>
-          <button type="button" id="medium" class="size-button btn btn-warning" name="button" value="300">Medium</button>
-          <button type="button" id="small" class="size-button btn btn-warning" name="button" value="300">Small</button>
         </div>
         <div class="col-md-4 buttons-col">
+          <div class="more-buttons">
+            <button type="button" id="large" class="size-button btn btn-warning" name="button" value="300">Large</button>
+            <button type="button" id="medium" class="size-button btn btn-warning" name="button" value="300">Medium</button>
+            <button type="button" id="small" class="size-button btn btn-warning" name="button" value="300">Small</button>
+            <button type="button" name="button" class="btn btn-danger" id="new-pizza">Save this Pizza and add another!</button>
+          </div>
           <div class="toppings-buttons-div">
             <h2>Choose your toppings!</h2>
             <p>
               Pick a topping again to add extra!
             </p>
           </div>
+          <p>
+            You have chosen:
+          </p>
           <div id="topping-pictures" class="toppings-chosen">
-            <p>
-              You have chosen:
-            </p>
 
+          </div>
+          <div class="toppings-chosen">
+            <div id="pizza-list">
+              <h3>Your current pizzas:</h3>
+            </div>
+          </div>
+          <div class="checkout-div">
+            <button type="button" id="checkout" class="checkout-button btn btn-primary" name="button">Checkout</button>
           </div>
         </div>
       </div>
@@ -98,9 +108,7 @@
         </div>
       </div>
     </div>
-    <div class="checkout-div">
-      <button type="button" id="checkout" class="checkout-button btn btn-primary" name="button">Checkout</button>
-    </div>
+
 
   </body>
 </html>

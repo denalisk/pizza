@@ -13,21 +13,17 @@ body {
   text-transform: capitalize;
 }
 
-#buffer-div {
-  height: 635px;
-  width: 100%;
-}
 
 #pizza-div {
-  height: 600px;
+  height: 650px;
   width: 100%;
-  display: none;
 }
 
 #pizza-dough {
   background-image: radial-gradient(circle at center 0, yellow, lightyellow);
   margin-left: 30%;
   margin-top: 4%;
+  display: none;
   /*position: relative;*/
 }
 
@@ -192,13 +188,19 @@ body {
 }
 
 .checkout-div {
+  top: 100px;
   margin-top: 1%;
-  margin-left: 15px;
+  margin-left: 0px;
 }
 
-.topping-chosen {
+.toppings-chosen {
   margin-top: 15px;
+  height: 150px;
 }
+
+
+
+
 
 
 
